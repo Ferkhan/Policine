@@ -6,8 +6,8 @@ class Conexion {
     private $password   = "ferkhan";
     private $conn       = null;
     protected   $TBL_PELICULA   = "pelicula",
-                $TBL_USUARIO    =  "usuario",
-                $TBL_FUNCION    =  "funcion";
+                $TBL_USUARIO    = "usuario",
+                $TBL_FUNCION    = "funcion";
 
     // Método que permite realizarla conección conexión a la base de datos
 
