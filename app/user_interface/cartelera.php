@@ -14,7 +14,7 @@ $datos = PeliculaBL::obtenerDatos();
         if (!empty($datos)) {
             foreach ($datos as $categoria) {
                 echo '<div class="pelicula">';
-                echo '<form action="funcion_detalle.php" method="get">';
+                echo '<form action="funcion_detalle.php" method="post">';
                 echo '<h2>' . $categoria['titulo'] . '</h2>';
                 echo '<img src="../../resources/images/' . $categoria['portada_imagen'] . '" alt="portada">';
                 echo '<p>' . $categoria['clasificacion'] . '</p>';
@@ -24,6 +24,7 @@ $datos = PeliculaBL::obtenerDatos();
                 echo '</form>';
                 echo '</div>';
             }
+            
         } else {
             echo '<p>No hay películas en cartelera</p>';
         }

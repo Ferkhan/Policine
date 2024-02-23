@@ -8,8 +8,8 @@ body {
 
 img {
     width: 100%; /* Ancho al 100% del contenedor */
-    max-width: 100px; /* Ancho máximo de 400px */
-    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 300px; /* Ancho máximo de 400px */
+    width: auto; /* Altura automática para mantener la proporción */
     border-radius: 5px; /* Borde redondeado */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
     margin-bottom: 20px; /* Margen inferior de 20px */
@@ -39,7 +39,7 @@ h1 {
 }
 
 .pelicula h2 {
-    margin-top: 0;
+    text-align: center;
 }
 
 .pelicula p {

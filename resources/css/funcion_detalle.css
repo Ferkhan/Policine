@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 100%;
+    /* height: 100vh; Establecer la altura al 100% del viewport */
+    display: flex; /* Utilizar flexbox para alinear los divs horizontalmente */
+}
+
+.funcion {
+    /* margin: 0 auto; */
+    padding: 20px;
+    flex: 1;
+}
+
+.descripcion {
+    /* margin: 0 auto; */
+    padding: 20px;
+    flex: 1;
+}
+
+.pelicula {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+img {
+    max-height: 300px;
+}
