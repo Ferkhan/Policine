@@ -1,4 +1,5 @@
 <?php
+$enlace = '192.168.1.19/Policine';
 $logo = ""; // Ruta al logo que vamos a utilizar.
 $titulo = "Policine";
 $menu = [
@@ -24,7 +25,9 @@ $menu = [
                     <?php foreach ($menu as $item => $link): ?>
                         <li><a href="<?php echo $link; ?>"><?php echo $item; ?></a></li>
                     <?php endforeach; ?>
-                    <li><a href="inicio_sesion.php" style="background-color: #ff0; padding: 10px 20px;">Iniciar sesion</a></li>
+                    <?php
+                    echo '<li><a href="' . $enlace . 'business_logic/cerrar_sesion_bl.php" style="background-color: #ff0; padding: 10px 20px;">Cerrar Sesion</a></li>'
+                    ?>
                 </ul>
             </nav>
         </div>
