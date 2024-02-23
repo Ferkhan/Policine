@@ -1,10 +1,11 @@
 <?php
 $logo = ""; // Ruta al logo que vamos a utilizar.
 $redesSociales = [
-    "Facebook" => "#",
-    "Instagram" => "#",
-    "Twitter" => "#",
-    "TikTok" => "#",
+    "Facebook" => "facebook.png",
+    "Instagram" => "instagram.png",
+    "Twitter" => "twitter.png",
+    "TikTok" => "tik-tok.png",
+    "Linkedin" => "linkedin.png"
 ];
 $sobreNosotros = [
     "Contactanos" => "#",
@@ -15,9 +16,10 @@ $sobreNosotros = [
     <div style="display: flex; justify-content: space-between;">
         <div>
             <img src="<?php echo $logo; ?>" alt="Logo" style="height: 50px;">
-            <?php foreach ($redesSociales as $redSocial => $link): ?>
-                <a href="<?php echo $link; ?>"><?php echo $redSocial; ?></a>
-            <?php endforeach; ?>
+            <?php foreach ($redesSociales as $redSocial => $link):
+                echo '<img src="../../../resources/images/' . $redSocial . '" alt="logo">';
+                // echo '<!-- <a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook</a> -->
+            endforeach; ?>
         </div>
         <div>
             <h3>Sobre nosotros</h3>
