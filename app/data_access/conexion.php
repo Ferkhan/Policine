@@ -1,6 +1,6 @@
 <?php
 class Conexion {
-    private $host       = "192.168.1.23";
+    private $host       = "192.168.127.184";
     private $dbname     = "DB_Policine";
     private $username   = "ferkhan";
     private $password   = "ferkhan";

@@ -1,5 +1,5 @@
 <?php
-$enlace = '192.168.1.19/Policine';
+$enlace = '192.168.127.184/Policine';
 $logo = ""; // Ruta al logo que vamos a utilizar.
 $titulo = "Policine";
 $menu = [
