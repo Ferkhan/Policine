@@ -1,6 +1,6 @@
 <?php
 $logo = ""; // Ruta al logo que vamos a utilizar.
-$titulo = "Ubicacion";
+$titulo = "Policine";
 $menu = [
     // "Fecha" => "#",
     "Peliculas" => "#"
@@ -10,7 +10,7 @@ $menu = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Policine <?php echo $titulo; ?></title>
+    <title><?php echo $titulo; ?></title>
 </head>
 <body>
     <header style="background-color: #000; color: #fff; padding: 20px;">

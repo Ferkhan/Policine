@@ -6,7 +6,6 @@ $datos = PeliculaBL::obtenerDatos();
 <?php include_once("templates/header.php"); ?>
 
 <link rel="stylesheet" href="../../resources/css/cartelera.css">
-<h2>Películas en cartelera</h2>
 
 <div class="container">
     <h1>Cartelera</h1>
@@ -15,12 +14,14 @@ $datos = PeliculaBL::obtenerDatos();
         if (!empty($datos)) {
             foreach ($datos as $categoria) {
                 echo '<div class="pelicula">';
-                // echo '<td>' . $categoria['pelicula_id'] . '</td>';
+                echo '<form action="funcion_detalle.php" method="get">';
                 echo '<h2>' . $categoria['titulo'] . '</h2>';
                 echo '<img src="../../resources/images/' . $categoria['portada_imagen'] . '" alt="portada">';
                 echo '<p>' . $categoria['clasificacion'] . '</p>';
                 echo '<p>' . $categoria['genero'] . '</p>';
-                echo '<input type="button" value="Seleccionar">';
+                echo '<input type="hidden" name="pelicula_id" value="' . $categoria['pelicula_id'] . '">';
+                echo '<input type="submit" value="Seleccionar">';
+                echo '</form>';
                 echo '</div>';
             }
         } else {
