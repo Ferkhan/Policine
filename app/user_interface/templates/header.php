@@ -1,9 +1,9 @@
 <?php
 $logo = ""; // Ruta al logo que vamos a utilizar.
-$titulo = "Ubicación";
+$titulo = "Ubicacion";
 $menu = [
-    "Fecha" => "#",
-    "Películas" => "#"
+    // "Fecha" => "#",
+    "Peliculas" => "#"
 ];
 ?>
 
@@ -24,12 +24,11 @@ $menu = [
                     <?php foreach ($menu as $item => $link): ?>
                         <li><a href="<?php echo $link; ?>"><?php echo $item; ?></a></li>
                     <?php endforeach; ?>
-                    <li><a href="inicio_sesion.php" style="background-color: #ff0; padding: 10px 20px;">Iniciar sesión</a></li>
+                    <li><a href="inicio_sesion.php" style="background-color: #ff0; padding: 10px 20px;">Iniciar sesion</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 </body>
-</html>
 
    

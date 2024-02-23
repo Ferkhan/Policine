@@ -7,7 +7,7 @@ $redesSociales = [
     "TikTok" => "#",
 ];
 $sobreNosotros = [
-    "Contáctanos" => "#",
+    "Contactanos" => "#",
 ];
 ?>
 
@@ -29,7 +29,7 @@ $sobreNosotros = [
         </div>
     </div>
     <div style="text-align: center; margin-top: 20px;">
-        <p>Policine © 2024. Todos los derechos reservados.</p>
+        <p>Policine ï¿½ 2024. Todos los derechos reservados.</p>
         <p>Desarrollado por: Grupo 3 - Sistemas Operativos 2023B</p>
     </div>
 </footer>
