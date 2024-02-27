@@ -1,5 +1,6 @@
 <?php
-$enlace = '192.168.127.184/Policine';
+
+$enlace = "http://192.168.1.19/Policine/app/";
 $logo = ""; // Ruta al logo que vamos a utilizar.
 $titulo = "Policine";
 $menu = [
@@ -24,8 +25,7 @@ $menu = [
                 <ul style="list-style-type: none; display: flex; gap: 20px;">
                     <?php foreach ($menu as $item => $link): ?>
                         <li><a href="<?php echo $link; ?>"><?php echo $item; ?></a></li>
-                    <?php endforeach; ?>
-                    <?php
+                    <?php endforeach;
                     echo '<li><a href="' . $enlace . 'business_logic/cerrar_sesion_bl.php" style="background-color: #ff0; padding: 10px 20px;">Cerrar Sesion</a></li>'
                     ?>
                 </ul>

@@ -45,6 +45,25 @@ class UsuarioDTO extends Conexion {
 
         } catch (PDOException $error) {
             echo $error->getMessage();
+            return null;
+        }
+    }
+
+    public static function insertarRegistro($datos) {
+        try {
+            $sql = "INSERT INTO usuario (nombre_completo, correo, clave, direccion) 
+                    VALUES (:nombre, :correo, :clave, :direccion)";
+            $stmt = Conexion::obtenerConexion()->prepare($sql);
+            $stmt ->bindParam(":nombre", $datos['nombre_completo']); 
+            $stmt ->bindParam(":correo", $datos['correo']);
+            $stmt ->bindParam(":clave", $datos['clave']);
+            $stmt ->bindParam(":direccion", $datos['direccion']);
+            $stmt->execute();
+            return true;
+
+        } catch (PDOException $error) {
+            echo $error->getMessage();
+            return false;
         }
     }
 }

@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$mensaje = isset($_SESSION['mensaje_inicio']) ? $_SESSION['mensaje_inicio'] : "";
+unset($_SESSION['mensaje_registro']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +19,7 @@
 <body>
     <form action="../business_logic/inicio_sesion_bl.php" method="post">
         <h1>INICIAR SESION</h1>
+        <?php echo "<p>" . $mensaje . "</p>"; ?>
         <hr>
         <i class="fa-solid fa-user"></i>
         <label>Correo</label>

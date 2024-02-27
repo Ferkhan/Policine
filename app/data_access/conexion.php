@@ -1,17 +1,12 @@
 <?php
 class Conexion {
-    private $host       = "192.168.127.184";
-    private $dbname     = "DB_Policine";
-    private $username   = "ferkhan";
-    private $password   = "ferkhan";
-    private $conn       = null;
-    protected   $TBL_PELICULA   = "pelicula",
-                $TBL_USUARIO    = "usuario",
-                $TBL_FUNCION    = "funcion";
+    public $host       = "192.168.1.23";
+    public $dbname     = "DB_Policine";
+    public $username   = "ferkhan";
+    public $password   = "ferkhan";
+    public $conn       = null;
 
-    // Método que permite realizarla conección conexión a la base de datos
-
-
+    // Método que permite realizarla la conexión a la base de datos
     public static function obtenerConexion() {
         try {
             $connection = new Conexion();
