@@ -31,6 +31,5 @@ $datos = PeliculaBL::obtenerDatos();
         ?>
     </div>
 </div>
-<a href="../business_logic/cerrar_sesion_bl.php" style="background-color: #ff0; padding: 10px 20px;">Cerrar Sesion</a>
 
 <?php include_once("templates/footer.php"); ?>

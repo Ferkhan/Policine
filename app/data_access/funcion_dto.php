@@ -46,7 +46,8 @@ class FuncionDTO extends Conexion {
                     INNER JOIN pelicula p ON f.pelicula_id = p.pelicula_id
                     INNER JOIN sala s ON f.sala_id = s.sala_id
                     WHERE f.estado_registro = true
-                    AND f.pelicula_id = :id";
+                    AND f.pelicula_id = :id
+                    ORDER BY f.fecha_funcion ASC, f.hora_inicio ASC";
             $stmt = Conexion::obtenerConexion()->prepare($sql);
             $stmt->bindParam(":id", $id);
             $stmt->execute();
