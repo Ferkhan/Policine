@@ -4,7 +4,7 @@ include_once("conexion.php");
 class PeliculaDTO extends Conexion {
     public static function leerDatos() {
         try {
-            $sql = "SELECT p.pelicula_id, p.titulo, c.nombre AS clasificacion, g.nombre AS genero, p.director, p.sinopsis, p.duracion_min, p.fecha_estreno, p.portada_imagen
+            $sql = "SELECT p.pelicula_id, p.titulo, c.nombre AS clasificacion, g.nombre AS genero, p.director, p.sinopsis, p.duracion_min, p.fecha_estreno, p.trailer_url, p.portada_imagen
                     FROM pelicula p
                     INNER JOIN clasificacion c ON p.clasificacion_id = c.clasificacion_id
                     INNER JOIN genero g ON p.genero_id = g.genero_id
@@ -21,7 +21,7 @@ class PeliculaDTO extends Conexion {
 
     public static function leerPorId($id) {
         try {
-            $sql = "SELECT p.pelicula_id, p.titulo, c.nombre AS clasificacion, g.nombre AS genero, p.director, p.sinopsis, p.duracion_min, p.fecha_estreno, p.portada_imagen
+            $sql = "SELECT p.pelicula_id, p.titulo, c.nombre AS clasificacion, g.nombre AS genero, p.director, p.sinopsis, p.duracion_min, p.fecha_estreno, p.portada_imagen, p.trailer_url
                     FROM pelicula p 
                     INNER JOIN clasificacion c ON p.clasificacion_id = c.clasificacion_id
                     INNER JOIN genero g ON p.genero_id = g.genero_id

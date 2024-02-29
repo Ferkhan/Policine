@@ -7,7 +7,6 @@ session_start();
 
 if ($_POST) {
     $_SESSION['pelicula_id'] = $_POST['pelicula_id'];
-    $bandera = $_POST['pelicula_id'];
     header("Location: funcion_detalle.php");
     die();
 } 
@@ -30,9 +29,8 @@ $funciones  = isset($_SESSION['pelicula_id']) ? FuncionBL::obtenerPorPelicula($_
         echo '<p>Genero: ' . $pelicula['genero'] . '</p>';
         echo '<h3>Sinopsis</h3>';
         echo '<p>' . $pelicula['sinopsis'] . '</p>';
-        // echo '<h3>Trailer</h3>';
-        // echo '<iframe src="' . $pelicula['trailer_ulr'] . '" with="500" height="100" frameborder="0"></iframe>';
-        // echo '<iframe width="560" height="315" src="https://www.youtube.com/watch?v=7wtfhZwyrcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        echo '<h3>Trailer</h3>';
+        echo '<iframe width="560" height="315" src="' . $pelicula['trailer_url'] . '" title="Trailer de pelicula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
     echo '</div>';
     ?>
     <iframe src="" with="500" height="100" frameborder="0"></iframe>
