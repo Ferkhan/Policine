@@ -5,7 +5,7 @@ $logo = "http://192.168.1.19/Policine/resources/images/epn.png"; // Ruta al logo
 $titulo = "Policine";
 $menu = [
     // "Fecha" => "#",
-    "Peliculas" => "#"
+    "Peliculas" => $enlace . "user_interface/cartelera.php"
 ];
 ?>
    
