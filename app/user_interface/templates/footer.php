@@ -1,6 +1,6 @@
 <?php
 
-$enlace = "http://192.168.1.19/Policine/resources/images/";
+$enlace = "http://localhost/Policine/resources/images/";
 $logos = [
     "Facebook" => "facebook.png",
     "Instagram" => "instagram.png",
@@ -19,11 +19,11 @@ $redesSociales = [
 
 
 $sobreNosotros = [
-    "Contactanos" => "#",
+    "Contactanos" => "#",   
 ];
 ?>
 
-<footer style="background-color: #000; color: #fff; padding: 20px; text-align: center;">
+<footer style="background-color: #1f1f1f; color: #fff; padding: 20px; text-align: center;">
     <div>
         <?php foreach ($redesSociales as $redSocial => $link): 
             echo '<a href="' . $link . '">';
@@ -36,3 +36,5 @@ $sobreNosotros = [
         <p>Desarrollado por: Grupo 3 - Sistemas Operativos 2023B</p>
     </div>
 </footer>
+
+

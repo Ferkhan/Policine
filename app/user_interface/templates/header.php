@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$enlace = "http://192.168.1.19/Policine/app/";
-$logo = "http://192.168.1.19/Policine/resources/images/epn.png"; // Ruta al logo que vamos a utilizar.
+$enlace = "http://localhost/Policine/app/";
+$logo = "http://localhost/Policine/resources/images/epn.png"; // Ruta al logo que vamos a utilizar.
 $titulo = "Policine";
 $nombre_usuario = $_SESSION['usuario_nombre'];
 $menu = [
@@ -17,25 +17,86 @@ $menu = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titulo; ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1f1f1f; /* Cambiando el color de fondo */
+            color: #fff;
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header > div {
+            max-width: 1200px;
+            margin: 0 auto; /* Centrando el encabezado */
+            width: 95%; /* Reduciendo el ancho del encabezado */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        nav ul li p {
+            margin: 0;
+            padding: 10px;
+        }
+
+        nav ul li:last-child a {
+            background-color: #ff0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li:last-child a:hover {
+            background-color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
-    <header style="background-color: #000; color: #fff; padding: 10px;">
-        <div style="display: flex; justify-content: space-between;">
+    <header>
+        <div>
             <div>
                 <img src="<?php echo $logo; ?>" alt="Logo" style="height: 50px;margin-bottom: 0;">
-                <span style="margin-left: 0px; font-size: 40px; font-weight: bold;"><?php echo $titulo; ?></span>
             </div>
+            <h1 style="margin: 0; font-size: 32px;"><?php echo $titulo; ?></h1>
             <nav>
-                <ul style="list-style-type: none; display: flex; gap: 20px;">
-                    <?php foreach ($menu as $item => $link): ?>
-                        <li><a href="<?php echo $link; ?>"><?php echo $item; ?></a></li>
-                    <?php endforeach;
-                    echo '<li><p>Bienvenido, ' . $nombre_usuario . '</p></li>';
-                    echo '<li><a href="' . $enlace . 'business_logic/cerrar_sesion_bl.php" style="background-color: #ff0; padding: 10px 20px;">Cerrar Sesion</a></li>'
-                    ?>
+                <ul>
+                    <li><a href="<?php echo $enlace . "user_interface/cartelera.php"; ?>">Peliculas</a></li>
+                    <li><p>Bienvenido, <?php echo $nombre_usuario; ?></p></li>
+                    <li><a href="<?php echo $enlace . 'business_logic/cerrar_sesion_bl.php'; ?>">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-   
