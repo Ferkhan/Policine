@@ -20,6 +20,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    align-content: space-between; /* Distribuir el espacio verticalmente */
 }
 
 .pelicula {
@@ -29,6 +30,13 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 200px;
     text-align: center;
+    display: flex; /* Alinear elementos internos */
+    flex-direction: column; /* Apilar elementos internos verticalmente */
+    justify-content: center; /* Alinear verticalmente */
+    align-items: center; /* Alinear horizontalmente */
+    height: 400px; /* Establecer una altura fija para todos los contenedores */
+    margin-bottom: 20px; /* Agregar margen inferior para espaciar las películas */
+    align-items: stretch; /* Alinear las imágenes de arriba a abajo */
 }
 
 .pelicula img {
