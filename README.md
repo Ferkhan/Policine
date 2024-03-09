@@ -1,14 +1,10 @@
-# Instrucciones
+# Aplicación Web sobre la Cartelera de un Cine
 
-Estar al pendiente del versionado de los documentos
+Esta página web permite observar las películas que se encuentran en cartelera.
 
-Una vez se descargen el documento, deben cambiar averiguar la dirección ip del servidor Postgres
-y poner esa dirección en el archivo app/data_access/conexion.php, en la variable $host
+Dentro de cada película se encuentra una lista con los horarios de función con
+detalles como la sala, fecha, hora y precio.
 
-Para algunas tablas, se debe crear un archivo en data_access y otro en business_logic.
-Tomar de referencia los archivos para la tabla pelicula
+Cuenta con un inicio de sesión y un registro de nuevos usuarios.
 
-No es necesario poner el encabezado ni el pie de pagina en el codigo html.
-Tomar referencia el archivo app/user_interface/cartelera.php
-
-Se seguirá una arquitectura de 3 capas.
+La base de datos que maneja es PostgreSQL. (Se encuentra en la carpeta /data_access)
