@@ -24,7 +24,7 @@ class Conexion {
     public static function obtenerConexion() {
         try {
             $connection = new Conexion();
-            $connection->conn = new PDO ("pgsql: host = $connection->host; port = $connection->port; dbname = $connection->dbname", $connection->username, $connection->password);
+            $connection->conn = new PDO ("pgsql: host = $connection->DB_HOST; port = $connection->DB_PORT; dbname = $connection->DB_NAME", $connection->DB_USER, $connection->DB_PASSWORD);
             // echo "Conexión exitosa";
             return $connection->conn;
         } catch(PDOException $exp) {
