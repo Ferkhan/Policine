@@ -6,7 +6,7 @@ class Conexion {
     // public $password   = "ferkhan";
     // public $conn       = null;
 
-    public $DB_HOST     = "ayamabiko.proxy.rlwy.net";
+    public $DB_HOST     = "yamabiko.proxy.rlwy.net";
     public $DB_NAME     = "railway";
     public $DB_USER     = "postgres";
     public $DB_PASSWORD = "EQdgiIzhThISqvEbupPkpSxSCWHrwZiw";
