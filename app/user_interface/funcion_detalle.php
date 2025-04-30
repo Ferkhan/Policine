@@ -3,7 +3,7 @@ include_once("../business_logic/funcion_bl.php");
 include_once("../business_logic/pelicula_bl.php");
 include_once("templates/header.php");
 
-session_start();
+// session_start();
 
 if ($_POST) {
     $_SESSION['pelicula_id'] = $_POST['pelicula_id'];
@@ -29,7 +29,7 @@ $funciones  = isset($_SESSION['pelicula_id']) ? FuncionBL::obtenerPorPelicula($_
         echo '<p>' . $pelicula['sinopsis'] . '</p>';
     echo '</div>';
     ?>
-    <iframe src="" with="500" height="100" frameborder="0"></iframe>
+    
     <div class="funcion">
         <div class="pelicula">
             <h2>Horarios de Función</h2>

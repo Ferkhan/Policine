@@ -18,17 +18,33 @@ $menu = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titulo; ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+        :root {
+            --color-fondo:rgb(1, 23, 34);
+            --color-secundario:rgb(4, 37, 54);
+            --color-terciario:rgb(13, 45, 62);
+            --color-acentuar:rgb(231, 201, 28); 
+            --color-acentuar-secundario:rgb(196, 138, 46);
+            --color-texto: #fff;
+            --color-texto-secundario: #555;
+            --fuente-principal: "DM Serif Text", serif;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #1f1f1f; /* Cambiando el color de fondo */
+            background-color: var(--color-secundario);
+            /* Cambiando el color de fondo */
             color: #fff;
             padding: 10px;
             font-family: 'Roboto', sans-serif;
@@ -37,66 +53,76 @@ $menu = [
             align-items: center;
         }
 
-        header > div {
+        header>div {
             max-width: 1200px;
-            margin: 0 auto; /* Centrando el encabezado */
-            width: 95%; /* Reduciendo el ancho del encabezado */
+            height: 70px;
+            margin: 0 auto;
+            /* Centrando el encabezado */
+            width: 95%;
+            /* Reduciendo el ancho del encabezado */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav ul {
-            list-style-type: none;
+        #wrapper_logo {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 40px;
+            font-family: var(--fuente-principal);
+            font-size: 45px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
             margin: 0;
             padding: 0;
         }
 
-        nav ul li a {
+        nav a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             font-weight: bold;
             transition: color 0.3s ease;
+            color: var(--color-acentuar);
         }
 
-        nav ul li a:hover {
-            color: #ffcc00;
+        nav a:hover {
+            color: var(--color-acentuar-secundario);
         }
 
-        nav ul li p {
+        nav p {
             margin: 0;
             padding: 10px;
         }
 
-        nav ul li:last-child a {
-            background-color: #ff0;
-            padding: 10px 20px;
+        #btn_cerrar {
+            background-color: var(--color-acentuar);
+            padding: 8px 18px;
             border-radius: 5px;
-            color: #000;
+            color: var(--color-fondo);
             transition: background-color 0.3s ease;
         }
 
-        nav ul li:last-child a:hover {
-            background-color: #ffcc00;
+        #btn_cerrar:hover {
+            background-color: var(--color-acentuar-secundario);
         }
     </style>
 </head>
 <body>
     <header>
         <div>
-            <div>
+            <div id="wrapper_logo">
                 <img src="<?php echo $logo; ?>" alt="Logo" style="height: 50px;margin-bottom: 0;">
+                <h1 style="margin: 0; font-size: 40px;"><?php echo $titulo; ?></h1>
             </div>
-            <h1 style="margin: 0; font-size: 32px;"><?php echo $titulo; ?></h1>
             <nav>
-                <ul>
-                    <li><a href="<?php echo $enlace . "user_interface/cartelera.php"; ?>">Peliculas</a></li>
-                    <li><p>Bienvenido, <?php echo $nombre_usuario; ?></p></li>
-                    <li><a href="<?php echo $enlace . 'business_logic/cerrar_sesion_bl.php'; ?>">Cerrar Sesión</a></li>
-                </ul>
+                <p>Bienvenido, <?php echo $nombre_usuario; ?></p>
+                <a href="<?php echo $enlace . "user_interface/cartelera.php"; ?>">Peliculas</a>
+                <a href="<?php echo $enlace . 'business_logic/cerrar_sesion_bl.php'; ?>" id="btn_cerrar">Cerrar Sesión</a>
             </nav>
         </div>
     </header>

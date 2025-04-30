@@ -23,12 +23,12 @@ unset($_SESSION['mensaje_registro']);
         <hr>
         <i class="fa-solid fa-user"></i>
         <label>Correo</label>
-        <input type="email" name="correo" placeholder="Correo">
+        <input type="email" name="correo" placeholder="Ingrese su correo">
 
         <br>
         <i class="fa-solid fa-unlock"></i>
-        <label>Clave    </label>
-        <input type="password" name="clave" placeholder="Clave">
+        <label>Contraseña    </label>
+        <input type="password" name="clave" placeholder="Ingrese su contraseña">
         <hr>
         <button type="submit">Iniciar Sesion</button>
         <a href="crear_cuenta.php">Crear Cuenta</a>

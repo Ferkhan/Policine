@@ -20,7 +20,7 @@ $datos = PeliculaBL::obtenerDatos();
                 echo '<p>' . $categoria['clasificacion'] . '</p>';
                 echo '<p>' . $categoria['genero'] . '</p>';
                 echo '<input type="hidden" name="pelicula_id" value="' . $categoria['pelicula_id'] . '">';
-                echo '<input type="submit" value="Seleccionar">';
+                echo '<input id="btn_seleccionar"  type="submit" value="Seleccionar">';
                 echo '</form>';
                 echo '</div>';
             }

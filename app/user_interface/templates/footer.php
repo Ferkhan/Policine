@@ -9,31 +9,14 @@ $logos = [
     "Linkedin" => "linkedin.png"
 ];
 
-$redesSociales = [
-    "Facebook"  => "https://www.facebook.com",
-    "Instagram" => "https://www.instagram.com",
-    "Twitter"   => "https://www.twitter.com",
-    "TikTok"    => "https://www.tik-tok.com",
-    "Linkedin"  => "https://www.linkedin.com"
-];
-
-
 $sobreNosotros = [
     "Contactanos" => "#",   
 ];
 ?>
 
-<footer style="background-color: #1f1f1f; color: #fff; padding: 20px; text-align: center;">
-    <div>
-        <?php foreach ($redesSociales as $redSocial => $link): 
-            echo '<a href="' . $link . '">';
-            echo '<img src="' . $enlace . $logos[$redSocial] . '" alt="logo" style="height: 40px; margin-left: 10px; margin-bottom: 0px">';
-            echo '</a>';
-        endforeach; ?>
-    </div>
+<footer style="background-color: var(--color-secundario); color: #fff; padding: 5px 0; text-align: center;">
     <div style="text-align: center; margin-top: 0px;">
         <p>Policine © 2024. Todos los derechos reservados.</p>
-        <p>Desarrollado por: Grupo 3 - Sistemas Operativos 2023B</p>
     </div>
 </footer>
 
