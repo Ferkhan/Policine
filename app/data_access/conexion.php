@@ -6,18 +6,18 @@ class Conexion {
     // public $password   = "ferkhan";
     // public $conn       = null;
 
-    // public $DB_HOST    = $_ENV["ayamabiko.proxy.rlwy.net"];
-    // public $DB_NAME     =    $_ENV=["railway"];
-    // public $DB_USER   =    $_ENV=["postgres"];
-    // public $DB_PASSWORD   =    $_ENV=["EQdgiIzhThISqvEbupPkpSxSCWHrwZiw"];
-    // public $DB_PORT       =    $_ENV=["51372"];
+    public $DB_HOST     = ["ayamabiko.proxy.rlwy.net"];
+    public $DB_NAME     = ["railway"];
+    public $DB_USER     = ["postgres"];
+    public $DB_PASSWORD = ["EQdgiIzhThISqvEbupPkpSxSCWHrwZiw"];
+    public $DB_PORT     = ["51372"];
 
 
-    public $DB_HOST       = getenv("DB_HOST");
-    public $DB_NAME       = getenv("DB_NAME");
-    public $DB_USER       = getenv("DB_USER");
-    public $DB_PASSWORD   = getenv("DB_PASSWORD");
-    public $DB_PORT       = getenv("DB_PORT");
+    // public $DB_HOST       = getenv("DB_HOST");
+    // public $DB_NAME       = getenv("DB_NAME");
+    // public $DB_USER       = getenv("DB_USER");
+    // public $DB_PASSWORD   = getenv("DB_PASSWORD");
+    // public $DB_PORT       = getenv("DB_PORT");
     public $conn       = null;
 
     // Método que permite realizarla la conexión a la base de datos
