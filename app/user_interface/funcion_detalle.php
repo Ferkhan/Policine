@@ -21,10 +21,10 @@ $funciones  = isset($_SESSION['pelicula_id']) ? FuncionBL::obtenerPorPelicula($_
     echo '<div class="descripcion">';
         echo '<h1>' . $pelicula['titulo'] . '</h1>';
         echo '<img src="../../resources/images/' . $pelicula['portada_imagen'] . '" alt="portada">';
-        echo '<p>Duración: ' . $pelicula['duracion_min'] . ' minutos</p>';
-        echo '<p>Director: ' . $pelicula['director'] . '</p>';
-        echo '<p>Clasificacion: ' . $pelicula['clasificacion'] . '</p>';
-        echo '<p>Genero: ' . $pelicula['genero'] . '</p>';
+        echo '<p><strong>Duración:</strong> ' . $pelicula['duracion_min'] . ' minutos</p>';
+        echo '<p><strong>Director:</strong> ' . $pelicula['director'] . '</p>';
+        echo '<p><strong>Clasificacion:</strong> ' . $pelicula['clasificacion'] . '</p>';
+        echo '<p><strong>Genero:</strong> ' . $pelicula['genero'] . '</p>';
         echo '<h3>Sinopsis</h3>';
         echo '<p>' . $pelicula['sinopsis'] . '</p>';
     echo '</div>';
@@ -59,7 +59,7 @@ $funciones  = isset($_SESSION['pelicula_id']) ? FuncionBL::obtenerPorPelicula($_
         </div>
 
         <!-- Trailer de la película -->
-        <h3>Trailer</h3>
+        <h2>Trailer</h2>
         <iframe width="560" height="315" src="<?php echo $pelicula['trailer_url']; ?>" title="Trailer de pelicula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </div>

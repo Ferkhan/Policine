@@ -16,7 +16,7 @@ $sobreNosotros = [
 
 <footer style="background-color: var(--color-secundario); color: #fff; padding: 5px 0; text-align: center;">
     <div style="text-align: center; margin-top: 0px;">
-        <p>Policine © 2024. Todos los derechos reservados.</p>
+        <p>Policine © 2025. Todos los derechos reservados.</p>
     </div>
 </footer>
 

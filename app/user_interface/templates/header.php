@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-$enlace = "http://localhost/Policine/app/";
-$logo = "http://localhost/Policine/resources/images/epn.png"; // Ruta al logo que vamos a utilizar.
+$enlace = "../../app/";
+$logo = "../../resources/images/epn.png"; 
 $titulo = "Policine";
 $nombre_usuario = $_SESSION['usuario_nombre'];
 $menu = [
     // "Fecha" => "#",
-    "Peliculas" => $enlace . "user_interface/cartelera.php"
+    "peliculas" => $enlace . "user_interface/cartelera.php",
+    "cerrar_sesion" => $enlace . "business_logic/cerrar_sesion_bl.php",
 ];
 ?>
    
@@ -32,6 +33,10 @@ $menu = [
             --color-texto: #fff;
             --color-texto-secundario: #555;
             --fuente-principal: "DM Serif Text", serif;
+        }
+        
+        html {
+            height: 100%;            
         }
 
         body {
@@ -121,8 +126,8 @@ $menu = [
             </div>
             <nav>
                 <p>Bienvenido, <?php echo $nombre_usuario; ?></p>
-                <a href="<?php echo $enlace . "user_interface/cartelera.php"; ?>">Peliculas</a>
-                <a href="<?php echo $enlace . 'business_logic/cerrar_sesion_bl.php'; ?>" id="btn_cerrar">Cerrar Sesión</a>
+                <a href="<?php echo $menu["peliculas"]; ?>">Peliculas</a>
+                <a href="<?php echo $menu["cerrar_sesion"]; ?>" id="btn_cerrar">Cerrar Sesión</a>
             </nav>
         </div>
     </header>
