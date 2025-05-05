@@ -1,0 +1,12 @@
+services:
+  php:
+    build: 
+      # context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    # container_name: app-php-apache
+    # networks:
+    #   - app-network
