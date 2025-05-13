@@ -6,12 +6,14 @@ class Conexion {
     // public $password   = "ferkhan";
     // public $conn       = null;
 
-    public $DB_HOST     = "yamabiko.proxy.rlwy.net";
+    // public $DB_HOST     = "yamabiko.proxy.rlwy.net";
+    public $DB_HOST     = "localhost";
     public $DB_NAME     = "railway";
     public $DB_USER     = "postgres";
     public $DB_PASSWORD = "EQdgiIzhThISqvEbupPkpSxSCWHrwZiw";
     public $DB_PORT     = "51372";
 
+    // CONFIGURACIÓN PARA POSTGRES DOCKER
 
     // public $DB_HOST       = getenv("DB_HOST");
     // public $DB_NAME       = getenv("DB_NAME");
