@@ -22,7 +22,7 @@ $datos['nombre_completo'] = $_POST['nombre_completo'];
 $datos['correo'] = $_POST['correo'];
 $datos['direccion'] = $_POST['direccion'];
 $datos['clave'] = md5($_POST['clave']);
-print_r($datos);
+
 if (UsuarioDTO::insertarRegistro($datos)) {
     $_SESSION['mensaje_inicio'] = "Cuenta creada con exito";
     header("Location: ../user_interface/inicio_sesion.php"); die();
