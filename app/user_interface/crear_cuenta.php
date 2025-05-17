@@ -24,7 +24,7 @@ $mensaje = isset($_SESSION['mensaje_registro']) ? $_SESSION['mensaje_registro'] 
             </div>
             <div class="form-group">
                 <label for="correo">Correo:</label>
-                <input type="text" id="correo" name="correo" required>
+                <input type="email" id="correo" name="correo" required>
             </div>
             <div class="form-group">
                 <label for="direccion">Direccion de domicilio:</label>
