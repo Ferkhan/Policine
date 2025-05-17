@@ -23,20 +23,20 @@ $mensaje = isset($_SESSION['mensaje_registro']) ? $_SESSION['mensaje_registro'] 
                 <input type="text" id="nombre_completo" name="nombre_completo" required>
             </div>
             <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input type="text" id="correo" name="correo" required>
-            </div>
-            <div class="form-group">
                 <label for="direccion">Direccion de domicilio:</label>
                 <input type="text" id="direccion" name="direccion" required>
             </div>
             <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required autocomplete="username">
+            </div>
+            <div class="form-group">
                 <label for="clave">Contraseña:</label>
-                <input type="password" id="clave" name="clave" required>
+                <input type="password" id="clave" name="clave" required autocomplete="new-password">
             </div>
             <div class="form-group">
                 <label for="confirmar">Confirmar la contraseña:</label>
-                <input type="password" id="confirmar" name="confirmar" required>
+                <input type="password" id="confirmar" name="confirmar" required autocomplete="new-password">
             </div>
             <button type="submit">Registrar</button>
         </form>

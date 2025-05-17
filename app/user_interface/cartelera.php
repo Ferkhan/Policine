@@ -1,9 +1,8 @@
 <?php
 include("../business_logic/pelicula_bl.php");
 $datos = PeliculaBL::obtenerDatos();
+include_once("templates/header.php"); 
 ?>
-
-<?php include_once("templates/header.php"); ?>
 
 <link rel="stylesheet" href="../../resources/css/cartelera.css">
 

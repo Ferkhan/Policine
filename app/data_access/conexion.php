@@ -7,11 +7,11 @@ class Conexion {
     // public $conn       = null;
 
     public $DB_HOST     = "yamabiko.proxy.rlwy.net";
+    // public $DB_HOST     = "policine-poli-1";
     public $DB_NAME     = "railway";
     public $DB_USER     = "postgres";
     public $DB_PASSWORD = "EQdgiIzhThISqvEbupPkpSxSCWHrwZiw";
     public $DB_PORT     = "51372";
-
 
     // public $DB_HOST       = getenv("DB_HOST");
     // public $DB_NAME       = getenv("DB_NAME");

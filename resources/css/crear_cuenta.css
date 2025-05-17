@@ -1,9 +1,9 @@
 :root {
-    --color-fondo:rgb(1, 23, 34);
-    --color-secundario:rgb(4, 37, 54);
-    --color-terciario:rgb(13, 45, 62);
-    --color-acentuar:rgb(231, 201, 28);
-    --color-acentuar-secundario:rgb(196, 138, 46);
+    --color-fondo: rgb(1, 23, 34);
+    --color-secundario: rgb(4, 37, 54);
+    --color-terciario: rgb(13, 45, 62);
+    --color-acentuar: rgb(231, 201, 28);
+    --color-acentuar-secundario: rgb(196, 138, 46);
     --color-texto: #fff;
     --color-texto-secundario: #555;
     --fuente-principal: "DM Serif Text", serif;
@@ -45,6 +45,7 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"] {
     width: calc(100% - 22px);
     padding: 10px;
