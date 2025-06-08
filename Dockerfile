@@ -9,4 +9,7 @@ EXPOSE 80
 # Instala las dependencias necesarias para que funcione postgres y pdo
 RUN apt-get update && apt-get install -y libpq-dev libzip-dev unzip git iputils-ping postgresql-client&& \
 	docker-php-ext-install pdo pdo_pgsql zip && \
-	docker-php-ext-enable pdo_pgsql
+	docker-php-ext-enable pdo_pgsql && \
+	apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
